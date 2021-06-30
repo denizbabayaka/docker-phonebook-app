@@ -10,8 +10,8 @@ pipeline {
         APP_REPO_NAME = "clarusway-repo/phonebook-app"
         APP_NAME = "phonebook"
         AWS_STACK_NAME = "Serdar-Phonebook-App-${BUILD_NUMBER}"
-        CFN_TEMPLATE="phonebook-docker-swarm-cfn-template.yml"
-        CFN_KEYPAIR="deniz-keypair"
+        CFN_TEMPLATE="phonebook-docker-swarm-cfn-template.yaml"
+        CFN_KEYPAIR="deniz-keypair.pem"
         HOME_FOLDER = "/home/ec2-user"
         GIT_FOLDER = sh(script:'echo ${GIT_URL} | sed "s/.*\\///;s/.git$//"', returnStdout:true).trim()
     }
